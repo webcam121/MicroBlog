@@ -21,8 +21,8 @@ class PostViewSet(viewsets.ModelViewSet):
     ordering_fields = ('created_at', 'author')
     permission_classes = (permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly)
 
-    def get_queryset(self):
-        return Post.objects.filter(author=self.request.user)
+    # def get_queryset(self):
+    #     return Post.objects.filter(author=self.request.user)
 
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)
