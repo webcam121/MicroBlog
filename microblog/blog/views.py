@@ -1,7 +1,7 @@
 from django.utils.decorators import method_decorator
 
-from .serializers import PostSerializer, TagSerializer
-from .models import Post, Tag
+from .serializers import PostSerializer
+from .models import Post
 from .permission import IsOwnerOrReadOnly
 from rest_framework import viewsets, permissions
 from rest_framework.filters import SearchFilter, OrderingFilter
