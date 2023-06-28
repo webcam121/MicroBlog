@@ -12,7 +12,7 @@ class Post(models.Model):
     content = models.TextField()
     author = models.ForeignKey("users.User", on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
-    tags = models.ForeignKey(Tag, on_delete=models.CASCADE)
+    tags = models.ManyToManyField(Tag)
     scheduled_time = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
