@@ -70,4 +70,4 @@ User Register **127.0.0.1:8000/users/register**
 
 User login **127.0.0.1:8000/users/login**
 
-blog endpoint **127.0.0.1:8000/api/post**
+blog endpoint **127.0.0.1:8000/api/posts**
