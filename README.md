@@ -44,7 +44,7 @@ sudo su - postgres
 ```
 
 ```bash
-sudo su - postgres
+psql
 ```
 
 ```bash
