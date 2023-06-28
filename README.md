@@ -69,8 +69,6 @@ Create superuser
 python manage.py createsuperuser
 ```
 
-You can add tags in the Django admin page
-
 The project will be available at **127.0.0.1:8000**.
 Admin page: **localhost:8000/admin/**
 
