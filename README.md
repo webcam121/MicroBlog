@@ -7,6 +7,13 @@ First, clone the repository to your local machine:
 ```bash
 git clone https://github.com/webcam121/MicroBlog.git
 ```
+
+Second, go to the main project:
+
+```bash
+cd Microblog
+```
+
 Create virtual environment
 
 ```bash
@@ -43,7 +50,9 @@ sudo su - postgres
 ```bash
 CREATE DATABASE microblog;
 ```
-
+```bash
+python manage.py makemigrations
+```
 ```bash
 python manage.py migrate
 ```
