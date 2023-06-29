@@ -37,6 +37,7 @@ class CustomUserManager(BaseUserManager):
         return self.create_user(email, password, **extra_fields)
 
 
+# This is required to make email the default username field.
 class User(AbstractUser):
     username = None
     email = models.EmailField(_('email address'), unique=True)

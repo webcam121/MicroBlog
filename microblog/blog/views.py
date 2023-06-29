@@ -11,9 +11,12 @@ from django.views.decorators.vary import vary_on_cookie
 import logging
 
 logger = logging.getLogger(__name__)
+
+
 class TagViewSet(viewsets.ModelViewSet):
     serializer_class = TagSerializer
     queryset = Tag.objects.all()
+
 
 class PostViewSet(viewsets.ModelViewSet):
     serializer_class = PostSerializer
@@ -23,7 +26,6 @@ class PostViewSet(viewsets.ModelViewSet):
     filterset_fields = ('tags', 'author', 'created_at', 'scheduled_time',)
     ordering_fields = ('created_at', 'author')
     permission_classes = (permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly)
-
 
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)

@@ -2,6 +2,7 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.backends import ModelBackend
 
 
+# create an authentication backend for this user,
 class EmailBackend(ModelBackend):
     def authenticate(self, request, **kwargs):
         UserModel = get_user_model()
